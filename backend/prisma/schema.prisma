@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  walletAddress String    @unique
+  reputation    Int       @default(0)
+  tasksCompleted Int      @default(0)
+  tokensEarned  Int       @default(0)
+  accuracy      Float     @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  tasks         Task[]
+}
+
+model Task {
+  id            String    @id @default(uuid())
+  imageUrl      String
+  status        TaskStatus @default(PENDING)
+  difficulty    TaskDifficulty
+  reward        Int
+  boundingBoxes Json
+  userId        String?
+  user          User?     @relation(fields: [userId], references: [id])
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  VERIFIED
+}
+
+enum TaskDifficulty {
+  EASY
+  MEDIUM
+  HARD
+} 
