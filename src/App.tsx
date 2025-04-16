@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import logo from '../public/logo.png';
-import warbotLogo from '../public/warbotlogo.webp';
-import cyberBg from '../public/cyber-bg.jpg';
-import cyberBgSvg from '../public/cyber-bg.svg';
+import logo from './assets/logo.png';
+import warbotLogo from './assets/warbotlogo.webp';
+import cyberBg from './assets/cyber-bg.jpg';
+import cyberBgSvg from './assets/cyber-bg.svg';
 
 const App: React.FC = () => {
   return (
