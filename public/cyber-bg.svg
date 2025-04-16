@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dark Background -->
+    <rect width="1920" height="1080" fill="#1a1a1a"/>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#grid)"/>
+    
+    <!-- Circuit Lines -->
+    <path d="M100,100 L300,100 M500,100 L700,100 M900,100 L1100,100 M1300,100 L1500,100 M1700,100 L1900,100
+             M100,300 L300,300 M500,300 L700,300 M900,300 L1100,300 M1300,300 L1500,300 M1700,300 L1900,300
+             M100,500 L300,500 M500,500 L700,500 M900,500 L1100,500 M1300,500 L1500,500 M1700,500 L1900,500
+             M100,700 L300,700 M500,700 L700,700 M900,700 L1100,700 M1300,700 L1500,700 M1700,700 L1900,700
+             M100,900 L300,900 M500,900 L700,900 M900,900 L1100,900 M1300,900 L1500,900 M1700,900 L1900,900"
+          stroke="#00ff00" stroke-width="1" stroke-dasharray="4,4" opacity="0.2"/>
+    
+    <!-- Binary Code Overlay -->
+    <text x="100" y="200" font-family="monospace" font-size="16" fill="#00ff00" opacity="0.1">
+        10101010 10101010 10101010 10101010 10101010 10101010 10101010 10101010
+    </text>
+</svg> 
