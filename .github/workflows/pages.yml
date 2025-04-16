@@ -40,7 +40,9 @@ jobs:
       - name: Build
         run: |
           npm run build
-          touch dist/.nojekyll
+          # Copy CNAME to dist directory
+          cp CNAME frontend/dist/
+          touch frontend/dist/.nojekyll
         working-directory: frontend
       
       - name: Setup Pages
